@@ -1,11 +1,11 @@
 import "./App.css";
 import Navbar from "./component/Navbar";
-import HomePage from "./component/HomePage";
+import Banner from "./component/Banner";
 function App() {
   return (
-    <div className="light:bg-white dark:bg-blue-950  ">
+    <div className="bg-white dark:bg-blue-950 ">
       <Navbar />
-      <HomePage />
+      <Banner />
     </div>
   );
 }
