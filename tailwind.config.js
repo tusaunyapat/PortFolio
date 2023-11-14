@@ -13,6 +13,7 @@ export default {
       gray: "#cbd5e1",
       lightblue: "#e0f2fe",
       skyblue: "#7dd3fc",
+      buttonhover: "#2563eb",
     },
     backgroundImage: {
       banner: "url('/src/assets/1_yTKO-GPdJwhdaZpCLNOgZA.png')",
