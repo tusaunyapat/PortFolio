@@ -3,7 +3,7 @@ import Navbar from "./component/Navbar";
 import Banner from "./component/Banner";
 function App() {
   return (
-    <div className="bg-white dark:bg-blue-950 ">
+    <div className="bg-white dark:bg-blue-950 font-[] ">
       <Navbar />
       <Banner />
     </div>
