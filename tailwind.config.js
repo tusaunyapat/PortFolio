@@ -14,11 +14,16 @@ export default {
       lightblue: "#e0f2fe",
       skyblue: "#7dd3fc",
       buttonhover: "#2563eb",
+      darkgray: "#64748b",
     },
     backgroundImage: {
       banner: "url('/src/assets/1_yTKO-GPdJwhdaZpCLNOgZA.png')",
     },
-    extend: {},
+    extend: {
+      width: {
+        120: "120rem",
+      },
+    },
   },
   plugins: [],
 };

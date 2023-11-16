@@ -5,6 +5,7 @@ import Interest from "./component/Interest";
 import Related from "./component/Related";
 import Program from "./component/Program";
 import Footer from "./component/Footer";
+import Project from "./component/Project";
 function App() {
   return (
     <div className="bg-white dark:bg-blue-950 font-[] ">
@@ -13,6 +14,7 @@ function App() {
       <Interest />
       <Related />
       <Program />
+      <Project />
       <Footer />
     </div>
   );

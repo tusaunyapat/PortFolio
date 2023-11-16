@@ -15,76 +15,61 @@ function Program() {
       id: 1,
       topic: "C / C++",
       icon: Cplus,
-      repo: "https://github.com/tusaunyapat/Intro-Data-Struc",
-      hasproject: true,
     },
     {
       id: 2,
       topic: "Python",
       icon: python,
-      repo: "",
-      hasproject: true,
     },
     {
       id: 3,
       topic: "HTML",
       icon: Html,
-      repo: "",
-      hasproject: true,
     },
     {
       id: 4,
       topic: "CSS",
       icon: css,
-      repo: "",
-      hasproject: true,
     },
     {
       id: 5,
       topic: "Javascript",
       icon: js,
-      repo: "",
-      hasproject: true,
     },
     {
       id: 6,
       topic: "Java",
       icon: java,
-      repo: "https://github.com/tusaunyapat/ProgMeth",
-      hasproject: true,
     },
     {
       id: 7,
       topic: "React",
       icon: react,
-      repo: "",
     },
     {
       id: 8,
       topic: "Vite",
       icon: vite,
-      repo: "",
-      hasproject: true,
     },
     {
       id: 9,
       topic: "TailwindCSS",
       icon: tailwind,
-      repo: "",
     },
   ];
   return (
-    <div className="flex justify-center  bg-white dark:bg-navy mt-50 py-72">
-      <div className="flex flex-col justify-center items-center py-6 h-full sm:h-96  text-navy dark:text-white w-full lg:w-10/12">
-        <div className="text-2xl py-4">
-          Programming Language, Framework, Tools
+    <div className="flex justify-center flex-wrap  bg-white dark:bg-navy mt-50  px-6 py-0">
+      <div className="flex flex-col justify-center items-center py-12 h-full sm:h-96  text-navy dark:text-white w-full lg:w-10/12">
+        <div className="text-lg lg:text-2xl py-4 pb-10">
+          <b>Programming Language, Framework and Tools</b>
         </div>
 
-        <div className="flex flex-wrap flex-col sm:flex-row py-2 w-full justify-center items-center">
+        <div className="overflow-x-auto overflow-hidden hover:overflow-x-auto flex flex-row  w-full justify-start items-center mx-20 py-8 ">
+          {/* EACH LANGUAGE*/}
           {data.map((item) => (
             <div
               key={item.id}
-              className="flex flex-col px-4 py-4 justify-center items-center mx-5 border-0 bg-lightgray dark:bg-blue  rounded-2xl my-4 w-6/12 sm:w-3/12 h-56 "
+              className="flex flex-col px-8 justify-center items-center  border-0 bg-lightgray dark:bg-blue  rounded-2xl mx-3 h-48 w-full sm:w-1/3" // Adjust the width here
               id={item.id}
             >
               <div className="w-16 py-4">
@@ -94,7 +79,7 @@ function Program() {
               {item.hasproject ? (
                 <button
                   className="border-0 px-6 py-1 pb-2 rounded-xl hover:bg-navy hover:text-white dark:hover:bg-white dark:hover:text-navy bg-gray dark:bg-navy
-                "
+      "
                 >
                   <a href={item.repo} className="text-xs" target="_blank">
                     repository

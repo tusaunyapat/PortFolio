@@ -1,27 +1,32 @@
 import React from "react";
+import datastructure from "/src/assets/datastructure.png";
+import digital from "/src/assets/diglo.png";
+import oop from "/src/assets/oop.png";
 
 function Related() {
   const data = [
     {
       id: 1,
       topic: "Data Structure & Algorithm",
-      icon: "src/assets/datastructure.png",
+      icon: datastructure,
     },
     {
       id: 2,
       topic: "Digital Logic Computer",
-      icon: "src/assets/diglo.png",
+      icon: digital,
     },
     {
       id: 3,
       topic: "Object Oriented Programming",
-      icon: "src/assets/oop.png",
+      icon: oop,
     },
   ];
   return (
-    <div className="flex justify-center  bg-whtie dark:bg-navy mt-50 py-2">
+    <div className="flex justify-center  bg-whtie dark:bg-navy mt-50 py-8">
       <div className="flex flex-col justify-center items-center h-full sm:h-96  text-navy dark:text-white w-full lg:w-10/12">
-        <div className="text-2xl py-4">Related Field</div>
+        <div className="text-lg lg:text-2xl py-4">
+          <b>Related Field</b>
+        </div>
 
         <div className="flex flex-wrap flex-col sm:flex-row py-2 w-full justify-center items-center">
           {data.map((item) => (
