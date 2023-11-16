@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BsFillMoonStarsFill, BsSun, BsCodeSlash } from "react-icons/bs";
-import { MdOutlineComputer, MdMenu, MdClose } from "react-icons/md";
+import { MdMenu, MdClose } from "react-icons/md";
 
 function Navbar() {
   const [theme, setTheme] = useState(null);
@@ -41,7 +41,7 @@ function Navbar() {
       </div>
 
       <ul
-        className={` bg-lightgray dark:bg-navy  sm:flex sm:flex-row z-[999] sm:z-auto sm:static absolute sm:w-auto w-full sm:my-4 my-8 ${
+        className={` bg-lightgray dark:bg-navy  sm:flex sm:flex-row z-[999] sm:z-auto sm:static absolute sm:w-auto w-full sm:my-0 md:my-4 my-8 ${
           mobileMenu ? "block" : "hidden"
         } transition-all duration-500 ease-in-out`}
       >
@@ -49,7 +49,11 @@ function Navbar() {
           className={`box-border mx-8 mt-6 my-6 md:my-0 px-4 py-2 border-b-2 border-white dark:border-black hover:border-navy dark:hover:border-white transition-all duration-500 ease-in-out hover:duration-100`}
           onClick={closeMobileMenu}
         >
-          <a href="#" className="text-sm text-navy dark:text-white ">
+          <a
+            href="#"
+            className="text-smnpm install react react-dom vite react-pdf-viewer
+ text-navy dark:text-white "
+          >
             HOME
           </a>
         </li>
