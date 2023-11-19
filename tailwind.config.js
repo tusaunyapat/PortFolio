@@ -23,6 +23,12 @@ export default {
       width: {
         120: "120rem",
       },
+      transitionDuration: {
+        default: "500",
+      },
+      transitionTimingFunction: {
+        default: "ease-in-out", // Set the default timing function
+      },
     },
   },
   plugins: [],

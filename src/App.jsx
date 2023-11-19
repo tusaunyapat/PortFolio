@@ -1,20 +1,20 @@
 import "./App.css";
 import Navbar from "./component/Navbar";
-import Banner from "./component/Banner";
-import Interest from "./component/Interest";
-import Related from "./component/Related";
-import Program from "./component/Program";
+import Homepage from "./component/Homepage";
 import Footer from "./component/Footer";
-import Project from "./component/Project";
+import Timeline from "./component/Timeline";
+import { Router, Route, Routes, Link } from "react-router-dom";
+import Profile from "./component/Profile";
+
 function App() {
   return (
-    <div className="bg-white dark:bg-blue-950 font-[] ">
+    <div className="bg-white dark:bg-blue-950 ">
       <Navbar />
-      <Banner />
-      <Interest />
-      <Related />
-      <Program />
-      <Project />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+
       <Footer />
     </div>
   );

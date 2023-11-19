@@ -36,11 +36,11 @@ function Project() {
   return (
     <div className="flex justify-center bg-white dark:bg-navy py-24 w-auto">
       <div className="flex flex-col justify-center items-center h-full w-full text-navy dark:text-white">
-        <div className="text-lg lg:text-2xl mb-8">
+        <div className="text-lg lg:text-2xl mb-4">
           <b>Project</b>
         </div>
 
-        <div className="overflow-y-scroll flex flex-wrap w-10/12 justify-center items-center mx-4 sm:mx-8 py-8 h-72 ">
+        <div className="overflow-y-scroll flex flex-wrap w-10/12 justify-center items-center mx-4 sm:mx-8 py-0 h-72 ">
           {data.map((item) => (
             <div
               key={item.name}
@@ -57,10 +57,7 @@ function Project() {
               </div>
               <div className="flex flex-row flex-wrap w-full pl-4">
                 {item.language.map((lang) => (
-                  <div
-                    key={lang}
-                    className="text-xs text-darkgray py-1 border-2 rounded-md mx-2 px-1 my-2"
-                  >
+                  <div className="text-xs text-darkgray py-1 border-2 rounded-md ml-2 mr-1 px-1 my-2">
                     {lang}
                   </div>
                 ))}
