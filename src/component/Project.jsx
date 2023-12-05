@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectJson from "/src/data/project.json";
+import FilePic from "/src/assets/file.png";
 
 function Project() {
   return (
@@ -18,7 +19,7 @@ function Project() {
           {ProjectJson.map((item) => (
             <div className="mb-4 flex-shrink-0 mx-4 bg-white w-9/12 sm:w-4/12 rounded-xl pt-2 shadow-lg snap-center dark:shadow-lightblue">
               <img
-                src="src\assets\file.png"
+                src={FilePic}
                 alt="pic"
                 className="w-5/12 flex items-center"
               ></img>

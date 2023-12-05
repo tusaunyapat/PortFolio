@@ -2,6 +2,7 @@ import React from "react";
 import InterestJson from "/src/data/Interest.json";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import CodePic from "/src/assets/code.png";
 
 function Interest() {
   const controls = useAnimation();
@@ -58,7 +59,7 @@ function Interest() {
               key={i}
               className="flex w-5/12 lg:w-3/12 flex-col items-center m-4 p-4 rounded-lg shadow-lg dark:shadow-lightblue"
             >
-              <img src="src\assets\code.png" alt="pic" className="w-4/12"></img>
+              <img src={CodePic} alt="pic" className="w-4/12"></img>
               <p className="text-xs sm:text-md text-center py-1">{item.name}</p>
             </motion.div>
           ))}

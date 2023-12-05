@@ -3,11 +3,12 @@ import { IoLogoGithub } from "react-icons/io5";
 import { BsFacebook } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { FaInstagram } from "react-icons/fa";
+import Hero from "/src/assets/meHello.jpg";
 
 export default function Banner() {
   return (
     <div className="w-full flex justify-center bg-white dark:bg-navy text-navy dark:text-white">
-      <div className="flex flex-col justify-center items-center sm:flex-row py-1 w-11/12 lg:w-8/12 h-screen">
+      <div className="flex flex-col justify-center items-center sm:flex-row py-1 w-11/12 lg:w-10/12 h-screen">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -21,13 +22,9 @@ export default function Banner() {
               restDelta: 0.001,
             },
           }}
-          className="w-6/12 flex flex-col justify-center items-center"
+          className="w-6/12 flex flex-col justify-between items-center"
         >
-          <img
-            className="w-8/12 pb-10 sm:pb-0"
-            src="src\assets\person.png"
-            alt="person"
-          ></img>
+          <img className="w-10/12 pb-10  sm:pb-0" src={Hero} alt="person"></img>
         </motion.div>
         <div className="w-10/12 sm:w-6/12 flex flex-col items-center sm:items-end justify-center ">
           <b className="text-2xl sm:text-5xl">Hi, I’m TUS.</b>
