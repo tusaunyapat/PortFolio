@@ -3,7 +3,7 @@ import { IoLogoGithub } from "react-icons/io5";
 import { BsFacebook } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { FaInstagram } from "react-icons/fa";
-import Hero from "/src/assets/meHello.jpg";
+import Hero from "/src/assets/meHello.png";
 
 export default function Banner() {
   return (
