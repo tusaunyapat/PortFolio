@@ -6,6 +6,7 @@ import CodePic from "/src/assets/code.png";
 
 function Interest() {
   const controls = useAnimation();
+
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
@@ -19,7 +20,7 @@ function Interest() {
   const containerVariants = {
     visible: {
       transition: {
-        staggerChildren: 0.1, // Adjust the stagger value as needed
+        staggerChildren: 0.3, // Adjust the stagger value as needed
       },
     },
   };
@@ -27,24 +28,42 @@ function Interest() {
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
+    transition: { duration: "2s" },
+  };
+  const topicVariant = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
     <div
       ref={ref}
-      className="w-full items-center py-10 bg-white dark:bg-navy text-navy dark:text-white"
+      className="pt-10 pb-32  w-full items-center py-32 bg-white dark:bg-navy text-navy dark:text-white"
     >
       <div className="flex flex-col items-center">
-        <div className="text-lg sm:text-xl">
+        <motion.div
+          className="text-lg sm:text-xl"
+          ref={ref}
+          initial="hidden"
+          animate={controls}
+          variants={topicVariant}
+          transition={{ duration: "0.8" }}
+        >
           <b>Interest</b>
-        </div>
-
-        <div className="text-sm sm:text-md pb-10 text-center">
+        </motion.div>
+        <motion.div
+          className="text-sm sm:text-md pb-10 text-center w-10/12"
+          ref={ref}
+          initial="hidden"
+          animate={controls}
+          variants={topicVariant}
+          transition={{ duration: "0.8" }}
+        >
           <p>
-            These are my projects about web development and other related field
-            projects.
+            These are what I'm interested in within this field, apart from web
+            development.
           </p>
-        </div>
+        </motion.div>
 
         <motion.div
           initial="hidden"
@@ -57,7 +76,7 @@ function Interest() {
               custom={i}
               variants={itemVariants}
               key={i}
-              className="flex w-5/12 lg:w-3/12 flex-col items-center m-4 p-4 rounded-lg shadow-lg dark:shadow-lightblue"
+              className="flex w-4/12 lg:w-3/12 flex-col items-center m-4 p-4 rounded-lg shadow-lg dark:shadow-lightblue"
             >
               <img src={CodePic} alt="pic" className="w-4/12"></img>
               <p className="text-xs sm:text-md text-center py-1">{item.name}</p>

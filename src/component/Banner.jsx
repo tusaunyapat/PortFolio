@@ -27,34 +27,57 @@ export default function Banner() {
           <img className="w-10/12 pb-10  sm:pb-0" src={Hero} alt="person"></img>
         </motion.div>
         <div className="w-10/12 sm:w-6/12 flex flex-col items-center sm:items-end justify-center ">
-          <b className="text-2xl sm:text-5xl">Hi, I’m TUS.</b>
-          <p className="text-md text-center sm:text-right">
-            I am a sophomore computer engineering student at Chulalongkorn
-            University. Now, I’m learning about web-development
-          </p>
-          <ul className="flex flex-row py-4">
-            <li className="px-2">
-              <a href="#">
-                <p className="text-3xl">
-                  <IoLogoGithub />
-                </p>
-              </a>
-            </li>
-            <li className="px-2">
-              <a href="#">
-                <p className="text-3xl">
-                  <BsFacebook />
-                </p>
-              </a>
-            </li>
-            <li className="pl-2">
-              <a href="#">
-                <p className="text-3xl">
-                  <FaInstagram />
-                </p>
-              </a>
-            </li>
-          </ul>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-2xl sm:text-5xl"
+          >
+            <b>Hi, I’m TUS.</b>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-2xl sm:text-5xl"
+          >
+            <p className="text-md text-center sm:text-right">
+              I am a sophomore computer engineering student at Chulalongkorn
+              University. Now, I’m learning about web-development
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-2xl sm:text-5xl"
+          >
+            <ul className="flex flex-row py-4">
+              <li className="px-2">
+                <a href="#">
+                  <p className="text-3xl">
+                    <IoLogoGithub />
+                  </p>
+                </a>
+              </li>
+              <li className="px-2">
+                <a href="#">
+                  <p className="text-3xl">
+                    <BsFacebook />
+                  </p>
+                </a>
+              </li>
+              <li className="pl-2">
+                <a href="#">
+                  <p className="text-3xl">
+                    <FaInstagram />
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </motion.div>
         </div>
       </div>
     </div>
