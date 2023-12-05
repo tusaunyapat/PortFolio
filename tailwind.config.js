@@ -2,34 +2,28 @@
 export default {
   darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-
   theme: {
     colors: {
-      navy: "#000435",
-      black: "#020617",
+      navy: "#01153e",
       white: "#ffffff",
-      lightgray: "#f1f5f9",
-      blue: "#172554",
-      gray: "#cbd5e1",
-      lightblue: "#e0f2fe",
-      skyblue: "#7dd3fc",
-      buttonhover: "#2563eb",
-      darkgray: "#64748b",
+      test: "#cffafe",
+      lightnavy: "#2e5a88",
+      lightblue: "#74b8f0",
+      whiteBlue: "#bdccee",
     },
-    backgroundImage: {
-      banner: "url('/src/assets/1_yTKO-GPdJwhdaZpCLNOgZA.png')",
+    fontSize: {
+      xs1: "0.6rem",
+      xs2: "0.7rem",
+      xs: "0.75rem",
+      sm: "0.875rem",
+      md: "1rem",
+      lg: "1.125rem",
+      xl: "1.25rem",
+      "2xl": "1.5rem",
+      "3xl": "2rem",
+      "5xl": "3rem",
     },
-    extend: {
-      width: {
-        120: "120rem",
-      },
-      transitionDuration: {
-        default: "500",
-      },
-      transitionTimingFunction: {
-        default: "ease-in-out", // Set the default timing function
-      },
-    },
+    extend: {},
   },
   plugins: [],
 };

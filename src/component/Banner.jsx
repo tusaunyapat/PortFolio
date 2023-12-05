@@ -1,55 +1,65 @@
 import React from "react";
-import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
-import mypic from "/src/assets/shiba.jpg";
+import { IoLogoGithub } from "react-icons/io5";
+import { BsFacebook } from "react-icons/bs";
+import { motion } from "framer-motion";
+import { FaInstagram } from "react-icons/fa";
 
-function Banner() {
-  const showPDF = () => {
-    setShowPdf(true);
-  };
+export default function Banner() {
   return (
-    <div className=" dark:bg-blue text-xl  dark:text-white flex bg-white justify-center h-2/6 sm:h-3/6 md:h-3/6 py-0 w-full">
-      <div className="bg-white dark:bg-blue w-full  md:w-10/12 xl:w-9/12 flex flex-col sm:flex-row justify-between xl:justify-center px-20 items-center py-6 sm:py-24 md:py-36">
-        <div className="w-32 my-10 sm:w-96 md:w-11/12 lg:max-w-xs">
-          <img src={mypic} alt="SHIBA"></img>
-        </div>
-
-        <div className="flex flex-col justify-center text-center sm:text-right items-center sm:items-end  text-navy dark:text-white  md:py-10">
-          <div className="text-3xl  lg:text-5xl py-2 ">
-            <p>HELLO</p>
-          </div>
-          <div className="py-2 text-sm sm:text-md lg:text-xl w-9/12 sm:w-10/12">
-            <p>
-              I'm Aunyapat N., a sophomore <b>computer engineering student</b>{" "}
-              at Chulalongkorn University. I'm passionate about self-learning in
-              Web Development.{" "}
-            </p>
-          </div>
-          <div className="w-48 flex flex-row justify-center items-center sm:justify-end">
-            <div className="bg-lightgray dark:bg-navy text-navy dark:text-white text-xs py-3 px-4 w-24 box-border border-0 rounded-xl hover:bg-navy hover:text-white dark:hover:bg-white dark:hover:text-navy">
-              <button>RESUME</button>
-            </div>
-            <div className="py-4">
-              <ul className="flex flxe-row justify-evenly sm:justify-end w-full my-2">
-                <li className="text-4xl sm:w-8 ml-4 dark:text-white">
-                  <a href="https://github.com/tusaunyapat">
-                    <FaGithub />
-                  </a>
-                </li>
-                <li className="text-4xl sm:w-8 ml-4 dark:text-white">
-                  <a href="https://www.facebook.com/profile.php?id=100002244265433">
-                    <FaFacebook />
-                  </a>
-                </li>
-                <li className="text-4xl sm:w-8 ml-4 dark:text-white">
+    <div className="w-full flex justify-center bg-white dark:bg-navy text-navy dark:text-white">
+      <div className="flex flex-col justify-center items-center sm:flex-row py-1 w-11/12 lg:w-8/12 h-screen">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.3,
+            ease: [0, 0.71, 0.2, 1.01],
+            scale: {
+              type: "spring",
+              damping: 5,
+              stiffness: 100,
+              restDelta: 0.001,
+            },
+          }}
+          className="w-6/12 flex flex-col justify-center items-center"
+        >
+          <img
+            className="w-8/12 pb-10 sm:pb-0"
+            src="src\assets\person.png"
+            alt="person"
+          ></img>
+        </motion.div>
+        <div className="w-10/12 sm:w-6/12 flex flex-col items-center sm:items-end justify-center ">
+          <b className="text-2xl sm:text-5xl">Hi, I’m TUS.</b>
+          <p className="text-md text-center sm:text-right">
+            I am a sophomore computer engineering student at Chulalongkorn
+            University. Now, I’m learning about web-development
+          </p>
+          <ul className="flex flex-row py-4">
+            <li className="px-2">
+              <a href="#">
+                <p className="text-3xl">
+                  <IoLogoGithub />
+                </p>
+              </a>
+            </li>
+            <li className="px-2">
+              <a href="#">
+                <p className="text-3xl">
+                  <BsFacebook />
+                </p>
+              </a>
+            </li>
+            <li className="pl-2">
+              <a href="#">
+                <p className="text-3xl">
                   <FaInstagram />
-                </li>
-              </ul>
-            </div>
-          </div>
+                </p>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   );
 }
-
-export default Banner;

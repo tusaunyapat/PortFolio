@@ -1,69 +1,39 @@
 import React from "react";
-import image from "/src/assets/image.png";
-import { PiCursorClickBold } from "react-icons/pi";
+import ProjectJson from "/src/data/project.json";
 
 function Project() {
-  const data = [
-    {
-      name: "Clone Website",
-      image: image,
-      repo: "https://github.com/2110215-ProgMeth/2110215--zipdrop",
-      language: ["React", "No framework"],
-      hasproject: false,
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem explicabo dolorum architecto sequi aspernatur cumque placeat magnam vel exercitationem assumenda.",
-    },
-    {
-      name: "Coffee Man",
-      image: image,
-      repo: "https://github.com/2110215-ProgMeth/2110215--zipdrop",
-      language: ["Java", "JavaFX"],
-      hasproject: true,
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem explicabo dolorum architecto sequi aspernatur cumque placeat magnam vel exercitationem assumenda.",
-    },
-    {
-      name: "Coffee Man",
-      image: image,
-      repo: "https://github.com/2110215-ProgMeth/2110215--zipdrop",
-      language: ["Java", "JavaFX"],
-      hasproject: true,
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem explicabo dolorum architecto sequi aspernatur cumque placeat magnam vel exercitationem assumenda.",
-    },
-  ];
-
   return (
-    <div className="flex justify-center bg-white dark:bg-navy py-24 w-auto">
-      <div className="flex flex-col justify-center items-center h-full w-full text-navy dark:text-white">
-        <div className="text-lg lg:text-2xl mb-4">
+    <div className="py-10 w-full flex justify-center bg-white dark:bg-navy text-navy dark:text-white">
+      <div className="flex flex-col items-center pb-4 w-11/12">
+        <div className="text-lg sm:text-xl">
           <b>Project</b>
         </div>
-
-        <div className="overflow-y-scroll flex flex-wrap w-10/12 justify-center items-center mx-4 sm:mx-8 py-0 h-72 ">
-          {data.map((item) => (
-            <div
-              key={item.name}
-              className="flex bg-gray flex-col py-4 items-start mx-5 border-0 bg-gray-300 dark:bg-blue rounded-2xl my-4 w-5/6 sm:w-9/12"
-            >
-              <div className="w-full sm:w-6/12 mx-6">
-                <img className="w-16" src={item.image} alt={item.name} />
-              </div>
-              <div className="text-lg py-2 text-left w-full px-6 flex items-center">
-                <b>{item.name}</b>
-                <a href={item.repo} className="pl-4">
-                  <PiCursorClickBold />
-                </a>
-              </div>
-              <div className="flex flex-row flex-wrap w-full pl-4">
-                {item.language.map((lang) => (
-                  <div className="text-xs text-darkgray py-1 border-2 rounded-md ml-2 mr-1 px-1 my-2">
-                    {lang}
-                  </div>
-                ))}
-              </div>
-              <div className="text-xs px-6 pb-4 text-left">
-                {item.description}
+        <div className="text-sm sm:text-md pb-10 text-center">
+          <p>
+            These are my projects about web development and other related field
+            projects.
+          </p>
+        </div>
+        <div className="flex flex-col sm:flex-row items-center overflow-hidden hover:overflow-y-auto sm:hover:overflow-x-auto w-10/12 snap-x h-56 sm:h-auto">
+          {ProjectJson.map((item) => (
+            <div className="mb-4 flex-shrink-0 mx-4 bg-white w-9/12 sm:w-4/12 rounded-xl pt-2 shadow-lg snap-center dark:shadow-lightblue">
+              <img
+                src="src\assets\file.png"
+                alt="pic"
+                className="w-5/12 flex items-center"
+              ></img>
+              <div className="flex flex-col px-3 py-2 bg-whiteBlue dark:bg-lightnavy rounded-b-xl">
+                <b className="pb-1">{item.name}</b>
+                <div className="flex flex-row">
+                  {item.tool.map((lang) => (
+                    <div className="text-[0.5rem] xl:text-[0.8rem] px-2 border-2 border-navy mr-1 rounded-[0.3rem]">
+                      {lang}
+                    </div>
+                  ))}
+                </div>
+                <p className="text-[0.55rem] py-1 xl:text-[0.8rem]">
+                  {item.description}
+                </p>
               </div>
             </div>
           ))}
